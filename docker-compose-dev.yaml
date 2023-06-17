@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+
+    leon-ai:
+        container_name: leon-ai
+        build: .
+        environment:
+            - FRONTEND_URL=http://localhost
+        volumes:
+            - "./data-local:/media/leon-ai"
+        ports:
+            - "80:80"
